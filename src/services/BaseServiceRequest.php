@@ -25,4 +25,10 @@ abstract class BaseServiceRequest {
 
 		return $filledvars;
 	}
+
+	public function getHeaders(){
+		return [
+			'Content-type: application/json; charset=utf-8'
+		];
+	}
 }

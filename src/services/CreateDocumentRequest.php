@@ -69,10 +69,15 @@ class CreateDocumentRequest extends BaseServiceRequest{
      * @inheritdoc
      */
     public function getRequestUrl() {
-        return self::REQUEST_URL.$this->groupCode.'/'.$this->operationType.'?tokenid='.$this->token;
+        return self::REQUEST_URL.$this->groupCode.'/'.$this->operationType;
     }
-    
-    /**
+
+    public function getHeaders()
+	{
+		return array_push(parent::getHeaders(), 'Token: '.$this->token);
+	}
+
+	/**
      * Добавить адрес магазина для оплаты (сайт)
      * @param string $address
      * @return CreateDocumentRequest

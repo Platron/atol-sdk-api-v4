@@ -36,8 +36,8 @@ class ChainTokenCreateStatusTest extends IntegrationTestBase {
         
         $this->assertTrue($createDocumentResponse->isValid());
         
-        $getStatusServise = new GetStatusRequest($this->groupCode, $createDocumentResponse->uuid, $tokenResponse->token);
-        $getStatusResponse = new GetStatusResponse($client->sendRequest($getStatusServise));
+        $getStatusService = new GetStatusRequest($this->groupCode, $createDocumentResponse->uuid, $tokenResponse->token);
+        $getStatusResponse = new GetStatusResponse($client->sendRequest($getStatusService));
 
         $this->assertTrue($getStatusResponse->isValid());
     }
