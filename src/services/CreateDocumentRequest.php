@@ -3,6 +3,10 @@
 namespace Platron\Atol\services;
 
 use Platron\Atol\data_objects\ReceiptPosition;
+use Platron\Atol\handbooks\ItemTypes;
+use Platron\Atol\handbooks\OperationTypes;
+use Platron\Atol\handbooks\PaymentTypes;
+use Platron\Atol\handbooks\SnoTypes;
 use Platron\Atol\SdkException;
 
 /**
@@ -36,34 +40,6 @@ class CreateDocumentRequest extends BaseServiceRequest{
     protected $callbackUrl = '';
     /** @var string */
     protected $itemsType;
-    
-    const 
-        OPERATION_TYPE_SELL = 'sell', // Приход
-        OPERATION_TYPE_SELL_REFUND = 'sell_refund', // Возврат прихода
-        OPERATION_TYPE_SELL_CORRECTION = 'sell_correction', // Коррекция прихода
-        OPERATION_TYPE_BUY = 'buy', // Расход
-        OPERATION_TYPE_BUY_REFUND = 'buy_refund', // Возврат расхода
-        OPERATION_TYPE_BUY_CORRECTION = 'buy_correction'; // Коррекция расхода
-    
-    const 
-        PAYMENT_TYPE_CASH = 0, // наличными
-        PAYMENT_TYPE_ELECTRON = 1, // электронными
-        PAYMENT_TYPE_PRE_PAID = 2, // предварительная оплата (аванс)
-        PAYMENT_TYPE_CREDIT = 3, // последующая оплата (кредит)
-        PAYMENT_TYPE_OTHER = 4,// иная форма оплаты (встречное предоставление
-        PAYMENT_TYPE_ADDITIONAL = 5; // расширенный типы оплаты. для каждого фискального типа оплаты можно указать расширенный тип оплаты
-    
-    const 
-        SNO_OSN = 'osn', // общая СН
-        SNO_USN_INCOME = 'usn_income', // упрощенная СН (доходы)
-        SNO_USN_INCOME_OUTCOME = 'usn_income_outcome', // упрощенная СН (доходы минус расходы)
-        SNO_ENDV = 'envd', // единый налог на вмененный доход
-        SNO_ESN = 'esn', // единый сельскохозяйственный налог
-        SNO_PATENT = 'patent'; // патентная СН
-        
-    const
-        ITEMS_TYPE_RECEIPT = 'receipt', // Наименование параметра для передачи товаров при операциях прихода, расхода и возвратов
-        ITEMS_TYPE_CORRECTION = 'correction'; // Наименование параметра для передачи товаров при операциях коррекции прихода, расхода
         
     /**
      * @inheritdoc
@@ -119,16 +95,11 @@ class CreateDocumentRequest extends BaseServiceRequest{
     
     /**
      * Установить тип платежа. Из констант
-     * @param int $paymentType
-     * throws SdkException
+     * @param PaymentTypes $paymentType
      * @return CreateDocumentRequest
      */
-    public function addPaymentType($paymentType){
-        if(!in_array($paymentType, $this->getPaymentTypes())){
-            throw new SdkException('Wrong payment type');
-        }
-        
-        $this->paymentType = $paymentType;
+    public function addPaymentType(PaymentTypes $paymentType){
+        $this->paymentType = $paymentType->getValue();
         return $this;
     }
     
@@ -154,16 +125,11 @@ class CreateDocumentRequest extends BaseServiceRequest{
     
     /**
      * Добавить SNO. Если у организации один тип - оно не обязательное. Из констант
-     * @param string $sno
-     * @throws SdkException
+     * @param SnoTypes $snoType
      * @return CreateDocumentRequest
      */
-    public function addSno($sno){
-        if(!in_array($sno, $this->getSnoTypes())){
-            throw new SdkException('Wrong sno type');
-        }
-        
-        $this->sno = $sno;
+    public function addSno(SnoTypes $snoType){
+        $this->sno = $snoType->getValue();
         return $this;
     }
 
@@ -178,17 +144,12 @@ class CreateDocumentRequest extends BaseServiceRequest{
     
     /**
      * Добавить тип операции и определить наименование параметра для передачи товаров
-     * @param string $operationType Тип операции. Из констант
-     * @throws SdkException
+     * @param OperationTypes $operationType Тип операции. Из констант
      * @return CreateDocumentRequest
      */
-    public function addOperationType($operationType){
-        if(!in_array($operationType, $this->getOperationTypes())){
-            throw new SdkException('Wrong operation type');
-        }
-        
-        $this->operationType = $operationType;
-        $this->itemsType = (stristr($this->operationType, 'correction') !== FALSE) ? self::ITEMS_TYPE_CORRECTION : self::ITEMS_TYPE_RECEIPT;
+    public function addOperationType(OperationTypes $operationType){
+        $this->operationType = $operationType->getValue();
+		$this->itemsType = ItemTypes::getByOperationType($operationType)->getValue();
         return $this;
     }
     
@@ -256,37 +217,5 @@ class CreateDocumentRequest extends BaseServiceRequest{
         }
         
         return $params;
-    }
-    
-    protected function getOperationTypes(){
-        return [
-            self::OPERATION_TYPE_BUY,
-            self::OPERATION_TYPE_BUY_CORRECTION,
-            self::OPERATION_TYPE_BUY_REFUND,
-            self::OPERATION_TYPE_SELL,
-            self::OPERATION_TYPE_SELL_CORRECTION,
-            self::OPERATION_TYPE_SELL_REFUND,
-        ];
-    }
-    
-    protected function getPaymentTypes(){
-        return [
-            self::PAYMENT_TYPE_CASH,
-            self::PAYMENT_TYPE_ELECTRON,
-            self::PAYMENT_TYPE_CREDIT,
-            self::PAYMENT_TYPE_OTHER,
-            self::PAYMENT_TYPE_PRE_PAID,
-        ];
-    }
-    
-    protected function getSnoTypes(){
-        return [
-            self::SNO_ENDV,
-            self::SNO_ESN,
-            self::SNO_OSN,
-            self::SNO_PATENT,
-            self::SNO_USN_INCOME,
-            self::SNO_USN_INCOME_OUTCOME,
-        ];
     }
 }
