@@ -2,6 +2,7 @@
 
 namespace Platron\Atol;
 
-class SdkException extends \Exception {
-    
+class SdkException extends \Exception
+{
+
 }

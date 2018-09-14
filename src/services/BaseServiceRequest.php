@@ -2,31 +2,41 @@
 
 namespace Platron\Atol\services;
 
-abstract class BaseServiceRequest {
-    const REQUEST_URL = 'https://online.atol.ru/possystem/v3/';
-    
-    /**
+use Platron\Atol\data_objects\BaseDataObject;
+
+abstract class BaseServiceRequest extends BaseDataObject
+{
+	/** @var bool */
+	private $demoMode;
+
+	const
+		REQUEST_URL = 'https://online.atol.ru/possystem/v4/',
+		REQUEST_DEMO_URL = 'https://testonline.atol.ru/possystem/v4/';
+
+	/**
 	 * Получить url ждя запроса
 	 * @return string
 	 */
 	abstract public function getRequestUrl();
-    
-    /**
-	 * Получить параметры, сгенерированные командой
-	 * @return array
-	 */
-	public function getParameters() {
-		$filledvars = array();
-		foreach (get_object_vars($this) as $name => $value) {
-			if ($value) {
-				$filledvars[$name] = (string)$value;
-			}
-		}
 
-		return $filledvars;
+	/**
+	 * @return string
+	 */
+	protected function getBaseUrl()
+	{
+		return $this->demoMode ? self::REQUEST_DEMO_URL : self::REQUEST_URL;
 	}
 
-	public function getHeaders(){
+	public function setDemoMode()
+	{
+		$this->demoMode = true;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getHeaders()
+	{
 		return [
 			'Content-type: application/json; charset=utf-8'
 		];
