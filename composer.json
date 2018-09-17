@@ -1,6 +1,6 @@
 {
     "name": "payprocessing/atol-sdk-api-v4",
-    "description": "Atol.online SDK",
+    "description": "Atol.online SDK Version 4",
     "require": {
         "php": ">=5.5",
         "psr/log": "1.0.2",
