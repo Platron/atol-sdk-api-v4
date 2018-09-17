@@ -1,19 +1,19 @@
 {
-    "name": "payprocessing/atol-sdk-api-v4",
-    "description": "Atol.online SDK Version 4",
-    "require": {
-        "php": ">=5.5",
-        "psr/log": "1.0.2",
-        "myclabs/php-enum": "^1.6"
-    },
-    "require-dev": {
-		"php": ">=5.6",
-		"phpunit/phpunit": "5.7"
-	},
-	"autoload": {
-		"psr-4": {
-			"Platron\\Atol\\": "src",
-                        "Platron\\Atol\\tests\\": "tests"
-		}
-	}
+  "name": "payprocessing/atol-sdk-api-v4",
+  "description": "Atol.online SDK Version 4",
+  "require": {
+    "php": ">=5.5",
+    "psr/log": "1.0.2",
+    "myclabs/php-enum": "^1.6"
+  },
+  "require-dev": {
+    "php": ">=5.6",
+    "phpunit/phpunit": "5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Platron\\Atol\\": "src",
+      "Platron\\Atol\\tests\\": "tests"
+    }
+  }
 }
