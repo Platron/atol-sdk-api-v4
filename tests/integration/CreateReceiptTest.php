@@ -15,41 +15,41 @@ use Platron\Atol\data_objects\ReceivePaymentsOperator;
 use Platron\Atol\data_objects\Supplier;
 use Platron\Atol\data_objects\Vat;
 use Platron\Atol\handbooks\AgentTypes;
-use Platron\Atol\handbooks\OperationTypes;
+use Platron\Atol\handbooks\ReceiptOperationTypes;
 use Platron\Atol\handbooks\PaymentMethods;
 use Platron\Atol\handbooks\PaymentObjects;
 use Platron\Atol\handbooks\PaymentTypes;
 use Platron\Atol\handbooks\SnoTypes;
 use Platron\Atol\handbooks\Vates;
+use Platron\Atol\SdkException;
 use Platron\Atol\services\CreateReceiptRequest;
 use Platron\Atol\services\CreateReceiptResponse;
-use Platron\Atol\services\GetStatusRequest;
 use Platron\Atol\services\GetStatusResponse;
-use Platron\Atol\services\GetTokenRequest;
 use Platron\Atol\services\GetTokenResponse;
-use Platron\Atol\tests\integration\TestLogger;
+use Platron\Atol\services\GetStatusRequest;
+use Platron\Atol\services\GetTokenRequest;
 
-class ChainTokenCreateStatusCorrectTest extends IntegrationTestBase
+class CreateReceiptTest extends IntegrationTestBase
 {
-	public function testChainTokenCreateStatus()
+	public function testCreateReceipt()
 	{
 		$client = new PostClient();
 		$client->addLogger(new TestLogger());
 
-		$tokenService = $this->createTokenService();
+		$tokenService = $this->createTokenRequest();
 		$tokenResponse = new GetTokenResponse($client->sendRequest($tokenService));
 
 		$this->assertTrue($tokenResponse->isValid());
 
-		$createDocumentService = $this->createDocumentService($tokenResponse);
-		$createDocumentResponse = new CreateReceiptResponse($client->sendRequest($createDocumentService));
+		$createReceiptRequest = $this->createReceiptRequest($tokenResponse->token);
+		$createReceiptResponse = new CreateReceiptResponse($client->sendRequest($createReceiptRequest));
 
-		$this->assertTrue($createDocumentResponse->isValid());
+		$this->assertTrue($createReceiptResponse->isValid());
 
-		$getStatusService = $this->createGetStatusService($createDocumentResponse, $tokenResponse);
-		$getStatusResponse = new GetStatusResponse($client->sendRequest($getStatusService));
-
-		$this->assertTrue($getStatusResponse->isValid());
+		$getStatusRequest = $this->createGetStatusRequest($createReceiptResponse, $tokenResponse);
+		if(!$this->checkReceiptStatus($client, $getStatusRequest)){
+			$this->fail('Receipt don`t change status');
+		}
 	}
 
 	/**
@@ -83,7 +83,7 @@ class ChainTokenCreateStatusCorrectTest extends IntegrationTestBase
 	private function createVat()
 	{
 		$vat = new Vat(new Vates(Vates::VAT10));
-		$vat->setSum(2);
+		$vat->addSum(2);
 		return $vat;
 	}
 
@@ -197,47 +197,68 @@ class ChainTokenCreateStatusCorrectTest extends IntegrationTestBase
 		$payment = $this->createPayment();
 		$customer = $this->createCustomer();
 		$company = $this->createCompany();
-		$receipt = new Receipt($customer, $company, $item, $payment, new OperationTypes(OperationTypes::BUY));
+		$receipt = new Receipt($customer, $company, $item, $payment, new ReceiptOperationTypes(ReceiptOperationTypes::BUY));
 		return $receipt;
 	}
 
 	/**
-	 * @param $tokenResponse
+	 * @param string $token
 	 * @return CreateReceiptRequest
 	 */
-	private function createDocumentService($tokenResponse)
+	private function createReceiptRequest($token)
 	{
 		$receipt = $this->createReceipt();
 		$externalId = time();
-		$createDocumentService = new CreateReceiptRequest(
-			$tokenResponse->token,
+		$createReceiptRequest = new CreateReceiptRequest(
+			$token,
 			$this->groupCode,
 			$externalId,
 			$receipt
 		);
-		$createDocumentService->setDemoMode();
-		return $createDocumentService;
+		$createReceiptRequest->setDemoMode();
+		return $createReceiptRequest;
 	}
 
 	/**
 	 * @return GetTokenRequest
 	 */
-	private function createTokenService()
+	private function createTokenRequest()
 	{
-		$tokenService = new GetTokenRequest($this->login, $this->password);
-		$tokenService->setDemoMode();
-		return $tokenService;
+		$tokenRequest = new GetTokenRequest($this->login, $this->password);
+		$tokenRequest->setDemoMode();
+		return $tokenRequest;
 	}
 
 	/**
-	 * @param $createDocumentResponse
+	 * @param $createReceiptResponse
 	 * @param $tokenResponse
 	 * @return GetStatusRequest
 	 */
-	private function createGetStatusService($createDocumentResponse, $tokenResponse)
+	private function createGetStatusRequest($createReceiptResponse, $tokenResponse)
 	{
-		$getStatusService = new GetStatusRequest($this->groupCode, $createDocumentResponse->uuid, $tokenResponse->token);
-		$getStatusService->setDemoMode();
-		return $getStatusService;
+		$getStatusRequest = new GetStatusRequest($this->groupCode, $createReceiptResponse->uuid, $tokenResponse->token);
+		$getStatusRequest->setDemoMode();
+		return $getStatusRequest;
+	}
+
+	/**
+	 * @param PostClient $client
+	 * @param GetStatusRequest $getStatusRequest
+	 * @return bool
+	 * @throws SdkException
+	 */
+	private function checkReceiptStatus(PostClient $client, GetStatusRequest $getStatusRequest)
+	{
+		for ($second = 0; $second <= 10; $second++) {
+			$getStatusResponse = new GetStatusResponse($client->sendRequest($getStatusRequest));
+			if ($getStatusResponse->isReceiptReady()) {
+				$this->assertTrue($getStatusResponse->isValid());
+				return true;
+			} else {
+				$second++;
+			}
+			sleep(1);
+		}
+		return false;
 	}
 }

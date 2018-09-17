@@ -3,6 +3,7 @@
 namespace Platron\Atol\services;
 
 use Platron\Atol\data_objects\Receipt;
+use Platron\Atol\data_objects\Service;
 
 class CreateReceiptRequest extends BaseServiceRequest
 {
@@ -15,6 +16,8 @@ class CreateReceiptRequest extends BaseServiceRequest
 	protected $external_id;
 	/** @var Receipt */
 	protected $receipt;
+	/** @var Service */
+	protected $service;
 
 	/**
 	 * @inheritdoc
@@ -47,6 +50,14 @@ class CreateReceiptRequest extends BaseServiceRequest
 		$this->groupCode = $groupCode;
 		$this->external_id = (string)$externalId;
 		$this->receipt = $receipt;
+	}
+
+	/**
+	 * @param Service $service
+	 */
+	public function addService(Service $service)
+	{
+		$this->service = $service;
 	}
 
 	/**

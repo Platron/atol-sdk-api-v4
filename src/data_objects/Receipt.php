@@ -2,7 +2,7 @@
 
 namespace Platron\Atol\data_objects;
 
-use Platron\Atol\handbooks\OperationTypes;
+use Platron\Atol\handbooks\ReceiptOperationTypes;
 
 class Receipt extends BaseDataObject
 {
@@ -23,9 +23,9 @@ class Receipt extends BaseDataObject
 	 * @param Company $company
 	 * @param Item $item
 	 * @param Payment $payment
-	 * @param OperationTypes $type
+	 * @param ReceiptOperationTypes $type
 	 */
-	public function __construct(Client $client, Company $company, Item $item, Payment $payment, OperationTypes $type)
+	public function __construct(Client $client, Company $company, Item $item, Payment $payment, ReceiptOperationTypes $type)
 	{
 		$this->client = $client;
 		$this->company = $company;

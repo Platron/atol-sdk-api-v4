@@ -10,6 +10,7 @@ interface iClient
 	/**
 	 * Послать запрос
 	 * @param BaseServiceRequest $service
+	 * @return stdClass
 	 */
 	public function sendRequest(BaseServiceRequest $service);
 }

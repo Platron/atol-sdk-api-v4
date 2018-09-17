@@ -38,6 +38,7 @@ class GetStatusResponse extends BaseServiceResponse
 			parent::__construct($response->payload);
 		} else {
 			$this->status = $response->status;
+			parent::__construct($response);
 		}
 	}
 

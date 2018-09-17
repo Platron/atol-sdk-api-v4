@@ -16,7 +16,7 @@ class Vat extends BaseDataObject
 		$this->type = $type->getValue();
 	}
 
-	public function setSum($sum)
+	public function addSum($sum)
 	{
 		$this->sum = $this->getTaxAmount($sum);
 	}

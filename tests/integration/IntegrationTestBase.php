@@ -2,8 +2,6 @@
 
 namespace Platron\Atol\tests\integration;
 
-use Platron\Atol\tests\integration\MerchantSettings;
-
 class IntegrationTestBase extends \PHPUnit_Framework_TestCase
 {
 	/** @var string */

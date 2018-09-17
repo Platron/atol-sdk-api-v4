@@ -41,7 +41,9 @@ class PostClient implements iClient
 	}
 
 	/**
-	 * @inheritdoc
+	 * @param BaseServiceRequest $service
+	 * @return stdClass
+	 * @throws SdkException
 	 */
 	public function sendRequest(BaseServiceRequest $service)
 	{
