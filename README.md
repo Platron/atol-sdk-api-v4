@@ -18,4 +18,4 @@ vendor/bin/phpunit vendor/payprocessing/atol-online/tests/integration
 
 ## Примеры использования
 
-Можно найти в интеграционных тестах https://github.com/Platron/atol.online/tree/master/tests/integration
+Можно найти в интеграционных тестах https://github.com/Platron/atol-sdk-api-v4/tree/hotfix/ffd105/tests/integration
