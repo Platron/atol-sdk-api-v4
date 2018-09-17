@@ -1,5 +1,5 @@
 {
-    "name": "payprocessing/atol-online",
+    "name": "payprocessing/atol-sdk-api-v4",
     "description": "Atol.online SDK",
     "require": {
         "php": ">=5.5",
