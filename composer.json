@@ -12,8 +12,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Platron\\Atol\\": "src",
-      "Platron\\Atol\\tests\\": "tests"
+      "Platron\\AtolV4\\": "src",
+      "Platron\\AtolV4\\tests\\": "tests"
     }
   }
 }
