@@ -1,8 +1,8 @@
 <?php
 
-namespace Platron\Atol\services;
+namespace Platron\AtolV4\services;
 
-use Platron\Atol\data_objects\BaseDataObject;
+use Platron\AtolV4\data_objects\BaseDataObject;
 
 abstract class BaseServiceRequest extends BaseDataObject
 {

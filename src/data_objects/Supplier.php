@@ -1,6 +1,6 @@
 <?php
 
-namespace Platron\Atol\data_objects;
+namespace Platron\AtolV4\data_objects;
 
 class Supplier extends BaseDataObject
 {

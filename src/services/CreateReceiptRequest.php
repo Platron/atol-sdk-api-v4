@@ -1,9 +1,9 @@
 <?php
 
-namespace Platron\Atol\services;
+namespace Platron\AtolV4\services;
 
-use Platron\Atol\data_objects\Receipt;
-use Platron\Atol\data_objects\Service;
+use Platron\AtolV4\data_objects\Receipt;
+use Platron\AtolV4\data_objects\Service;
 
 class CreateReceiptRequest extends BaseServiceRequest
 {

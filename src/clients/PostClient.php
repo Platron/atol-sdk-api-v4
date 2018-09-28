@@ -1,10 +1,10 @@
 <?php
 
-namespace Platron\Atol\clients;
+namespace Platron\AtolV4\clients;
 
-use Platron\Atol\clients\iClient;
-use Platron\Atol\SdkException;
-use Platron\Atol\services\BaseServiceRequest;
+use Platron\AtolV4\clients\iClient;
+use Platron\AtolV4\SdkException;
+use Platron\AtolV4\services\BaseServiceRequest;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 

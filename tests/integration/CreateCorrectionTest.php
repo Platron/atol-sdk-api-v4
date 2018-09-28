@@ -1,25 +1,25 @@
 <?php
 
-namespace Platron\Atol\tests\integration;
+namespace Platron\AtolV4\tests\integration;
 
-use Platron\Atol\clients\PostClient;
-use Platron\Atol\data_objects\Company;
-use Platron\Atol\data_objects\Correction;
-use Platron\Atol\data_objects\CorrectionInfo;
-use Platron\Atol\data_objects\Payment;
-use Platron\Atol\data_objects\Vat;
-use Platron\Atol\handbooks\CorrectionOperationTypes;
-use Platron\Atol\handbooks\CorrectionTypes;
-use Platron\Atol\handbooks\PaymentTypes;
-use Platron\Atol\handbooks\SnoTypes;
-use Platron\Atol\handbooks\Vates;
-use Platron\Atol\SdkException;
-use Platron\Atol\services\CreateCorrectionRequest;
-use Platron\Atol\services\CreateReceiptResponse;
-use Platron\Atol\services\GetTokenResponse;
-use Platron\Atol\services\GetStatusResponse;
-use Platron\Atol\services\GetStatusRequest;
-use Platron\Atol\services\GetTokenRequest;
+use Platron\AtolV4\clients\PostClient;
+use Platron\AtolV4\data_objects\Company;
+use Platron\AtolV4\data_objects\Correction;
+use Platron\AtolV4\data_objects\CorrectionInfo;
+use Platron\AtolV4\data_objects\Payment;
+use Platron\AtolV4\data_objects\Vat;
+use Platron\AtolV4\handbooks\CorrectionOperationTypes;
+use Platron\AtolV4\handbooks\CorrectionTypes;
+use Platron\AtolV4\handbooks\PaymentTypes;
+use Platron\AtolV4\handbooks\SnoTypes;
+use Platron\AtolV4\handbooks\Vates;
+use Platron\AtolV4\SdkException;
+use Platron\AtolV4\services\CreateCorrectionRequest;
+use Platron\AtolV4\services\CreateReceiptResponse;
+use Platron\AtolV4\services\GetTokenResponse;
+use Platron\AtolV4\services\GetStatusResponse;
+use Platron\AtolV4\services\GetStatusRequest;
+use Platron\AtolV4\services\GetTokenRequest;
 
 class CreateCorrectionTest extends IntegrationTestBase
 {

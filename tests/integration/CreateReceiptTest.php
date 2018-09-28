@@ -1,33 +1,33 @@
 <?php
 
-namespace Platron\Atol\tests\integration;
+namespace Platron\AtolV4\tests\integration;
 
-use Platron\Atol\clients\PostClient;
-use Platron\Atol\data_objects\AgentInfo;
-use Platron\Atol\data_objects\Client;
-use Platron\Atol\data_objects\Company;
-use Platron\Atol\data_objects\Item;
-use Platron\Atol\data_objects\MoneyTransferOperator;
-use Platron\Atol\data_objects\PayingAgent;
-use Platron\Atol\data_objects\Payment;
-use Platron\Atol\data_objects\Receipt;
-use Platron\Atol\data_objects\ReceivePaymentsOperator;
-use Platron\Atol\data_objects\Supplier;
-use Platron\Atol\data_objects\Vat;
-use Platron\Atol\handbooks\AgentTypes;
-use Platron\Atol\handbooks\ReceiptOperationTypes;
-use Platron\Atol\handbooks\PaymentMethods;
-use Platron\Atol\handbooks\PaymentObjects;
-use Platron\Atol\handbooks\PaymentTypes;
-use Platron\Atol\handbooks\SnoTypes;
-use Platron\Atol\handbooks\Vates;
-use Platron\Atol\SdkException;
-use Platron\Atol\services\CreateReceiptRequest;
-use Platron\Atol\services\CreateReceiptResponse;
-use Platron\Atol\services\GetStatusResponse;
-use Platron\Atol\services\GetTokenResponse;
-use Platron\Atol\services\GetStatusRequest;
-use Platron\Atol\services\GetTokenRequest;
+use Platron\AtolV4\clients\PostClient;
+use Platron\AtolV4\data_objects\AgentInfo;
+use Platron\AtolV4\data_objects\Client;
+use Platron\AtolV4\data_objects\Company;
+use Platron\AtolV4\data_objects\Item;
+use Platron\AtolV4\data_objects\MoneyTransferOperator;
+use Platron\AtolV4\data_objects\PayingAgent;
+use Platron\AtolV4\data_objects\Payment;
+use Platron\AtolV4\data_objects\Receipt;
+use Platron\AtolV4\data_objects\ReceivePaymentsOperator;
+use Platron\AtolV4\data_objects\Supplier;
+use Platron\AtolV4\data_objects\Vat;
+use Platron\AtolV4\handbooks\AgentTypes;
+use Platron\AtolV4\handbooks\ReceiptOperationTypes;
+use Platron\AtolV4\handbooks\PaymentMethods;
+use Platron\AtolV4\handbooks\PaymentObjects;
+use Platron\AtolV4\handbooks\PaymentTypes;
+use Platron\AtolV4\handbooks\SnoTypes;
+use Platron\AtolV4\handbooks\Vates;
+use Platron\AtolV4\SdkException;
+use Platron\AtolV4\services\CreateReceiptRequest;
+use Platron\AtolV4\services\CreateReceiptResponse;
+use Platron\AtolV4\services\GetStatusResponse;
+use Platron\AtolV4\services\GetTokenResponse;
+use Platron\AtolV4\services\GetStatusRequest;
+use Platron\AtolV4\services\GetTokenRequest;
 
 class CreateReceiptTest extends IntegrationTestBase
 {

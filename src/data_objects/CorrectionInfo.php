@@ -1,8 +1,8 @@
 <?php
 
-namespace Platron\Atol\data_objects;
+namespace Platron\AtolV4\data_objects;
 
-use Platron\Atol\handbooks\CorrectionTypes;
+use Platron\AtolV4\handbooks\CorrectionTypes;
 
 class CorrectionInfo extends BaseDataObject
 {

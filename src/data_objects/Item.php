@@ -1,9 +1,9 @@
 <?php
 
-namespace Platron\Atol\data_objects;
+namespace Platron\AtolV4\data_objects;
 
-use Platron\Atol\handbooks\PaymentMethods;
-use Platron\Atol\handbooks\PaymentObjects;
+use Platron\AtolV4\handbooks\PaymentMethods;
+use Platron\AtolV4\handbooks\PaymentObjects;
 
 class Item extends BaseDataObject
 {

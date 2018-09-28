@@ -1,6 +1,6 @@
 <?php
 
-namespace Platron\Atol\services;
+namespace Platron\AtolV4\services;
 
 class CreateReceiptResponse extends CreateDocumentResponse
 {

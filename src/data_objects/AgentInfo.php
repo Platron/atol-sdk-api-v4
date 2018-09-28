@@ -1,8 +1,8 @@
 <?php
 
-namespace Platron\Atol\data_objects;
+namespace Platron\AtolV4\data_objects;
 
-use Platron\Atol\handbooks\AgentTypes;
+use Platron\AtolV4\handbooks\AgentTypes;
 
 class AgentInfo extends BaseDataObject
 {
