@@ -41,7 +41,10 @@ abstract class BaseServiceResponse
 	private function setStandardError(stdClass $response)
 	{
 		$this->errorCode = $response->error->code;
-		$this->errorDescription = 'Error type '.$response->error->text.' error_id '.$response->error->error_id.' '.$response->error->text;
+		$this->errorDescription = 'Error type '.$response->error->type.' error code '.$response->error->code.' '.$response->error->text;
+		if(!empty($response->error->error_id)){
+			$this->errorDescription .= '. Error id '.$response->error->error_id;
+		}
 	}
 
 	/**
