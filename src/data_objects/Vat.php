@@ -38,6 +38,9 @@ class Vat extends BaseDataObject
 			case Vates::VAT18:
 			case Vates::VAT118:
 				return round($amount * 18 / 118, 2);
+            case Vates::VAT20:
+            case Vates::VAT120:
+                return round($amount * 20 / 120, 2);
 		}
 	}
 }
