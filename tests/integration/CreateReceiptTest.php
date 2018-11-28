@@ -197,7 +197,7 @@ class CreateReceiptTest extends IntegrationTestBase
 		$payment = $this->createPayment();
 		$customer = $this->createCustomer();
 		$company = $this->createCompany();
-		$receipt = new Receipt($customer, $company, $item, $payment, new ReceiptOperationTypes(ReceiptOperationTypes::BUY));
+		$receipt = new Receipt($customer, $company, [$item], $payment, new ReceiptOperationTypes(ReceiptOperationTypes::BUY));
 		return $receipt;
 	}
 

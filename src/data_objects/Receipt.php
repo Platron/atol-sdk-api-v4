@@ -21,15 +21,17 @@ class Receipt extends BaseDataObject
 	 * Document constructor.
 	 * @param Client $client
 	 * @param Company $company
-	 * @param Item $item
+	 * @param Item[] $items
 	 * @param Payment $payment
 	 * @param ReceiptOperationTypes $type
 	 */
-	public function __construct(Client $client, Company $company, Item $item, Payment $payment, ReceiptOperationTypes $type)
+	public function __construct(Client $client, Company $company, $items, Payment $payment, ReceiptOperationTypes $type)
 	{
 		$this->client = $client;
 		$this->company = $company;
-		$this->addItem($item);
+		foreach($items as $item) {
+			$this->addItem($item);
+		}
 		$this->addPayment($payment);
 		$this->operationType = $type->getValue();
 	}
@@ -37,7 +39,7 @@ class Receipt extends BaseDataObject
 	/**
 	 * @param Item $item
 	 */
-	public function addItem(Item $item)
+	private function addItem(Item $item)
 	{
 		$this->items[] = $item;
 	}
