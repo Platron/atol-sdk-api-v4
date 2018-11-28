@@ -2,7 +2,6 @@
 
 namespace Platron\AtolV4\clients;
 
-use Platron\AtolV4\clients\iClient;
 use Platron\AtolV4\SdkException;
 use Platron\AtolV4\services\BaseServiceRequest;
 use Psr\Log\LoggerInterface;
