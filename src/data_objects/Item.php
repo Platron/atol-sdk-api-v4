@@ -26,6 +26,8 @@ class Item extends BaseDataObject
 	protected $payment_object;
 	/** @var AgentInfo */
 	protected $agent_info;
+	/** @var Supplier */
+	protected $supplier_info;
 	/** @var string */
 	protected $user_data;
 
@@ -88,6 +90,7 @@ class Item extends BaseDataObject
 	public function addAgentInfo(AgentInfo $agentInfo)
 	{
 		$this->agent_info = $agentInfo;
+		$this->supplier_info = $agentInfo->getSupplierInfo();
 	}
 
 	/**

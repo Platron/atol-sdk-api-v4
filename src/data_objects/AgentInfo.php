@@ -9,7 +9,7 @@ class AgentInfo extends BaseDataObject
 	/** @var string */
 	protected $type;
 	/** @var Supplier */
-	protected $supplier_info;
+	private $supplier_info;
 	/** @var PayingAgent */
 	protected $paying_agent;
 	/** @var ReceivePaymentsOperator */
@@ -21,6 +21,14 @@ class AgentInfo extends BaseDataObject
 	{
 		$this->type = $type->getValue();
 		$this->supplier_info = $supplier;
+	}
+
+	/**
+	 * @return Supplier
+	 */
+	public function getSupplierInfo()
+	{
+		return $this->supplier_info;
 	}
 
 	/**
