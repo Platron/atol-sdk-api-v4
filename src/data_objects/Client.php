@@ -16,10 +16,10 @@ class Client extends BaseDataObject
 	}
 
 	/**
-	 * @param int $phone
+	 * @param int $phone Номер телефона в международном формате
 	 */
 	public function addPhone($phone)
 	{
-		$this->phone = (string)$phone;
+		$this->phone = '+'.(string)$phone;
 	}
 }
