@@ -15,7 +15,7 @@ class PaymentObjects extends Enum
 		GAMBLING_PRIZE = 'gambling_prize',
 		LOTTERY = 'lottery',
 		LOTTERY_PRIZE = 'lottery_prize',
-		INTELLECTUAL_ACTIVITY = '«intellectual_activity',
+		INTELLECTUAL_ACTIVITY = 'intellectual_activity',
 		PAYMENT = 'payment',
 		AGENT_COMMISSION = 'agent_commission',
 		COMPOSITE = 'composite',
