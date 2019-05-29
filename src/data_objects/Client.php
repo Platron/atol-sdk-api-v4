@@ -6,6 +6,8 @@ class Client extends BaseDataObject
 {
 	protected $phone;
 	protected $email;
+	protected $name;
+	protected $inn;
 
 	/**
 	 * @param string $email
@@ -21,5 +23,21 @@ class Client extends BaseDataObject
 	public function addPhone($phone)
 	{
 		$this->phone = '+'.(string)$phone;
+	}
+
+	/**
+	 * @param string $name
+	 */
+	public function addName($name)
+	{
+		$this->name = (string)$name;
+	}
+
+	/**
+	 * @param int $inn
+	 */
+	public function addInn($inn)
+	{
+		$this->inn = (string)$inn;
 	}
 }
