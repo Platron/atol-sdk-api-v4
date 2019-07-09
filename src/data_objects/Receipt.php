@@ -16,6 +16,8 @@ class Receipt extends BaseDataObject
 	private $payments;
 	/** @var string */
 	private $operationType;
+	/** @var string */
+	private $additionalCheckProps;
 
 	/**
 	 * Document constructor.
@@ -87,6 +89,24 @@ class Receipt extends BaseDataObject
 
 		$params['total'] = (double)$this->getItemsAmount();
 
+		if (!empty($this->additionalCheckProps)) {
+		    $params['additional_check_props'] = $this->additionalCheckProps;
+        }
+
 		return $params;
 	}
+
+    /**
+     * @param string $additionalCheckProps
+     */
+	public function setAdditionalCheckProps($additionalCheckProps)
+    {
+        if (!is_string($additionalCheckProps)) {
+            throw new \InvalidArgumentException('Parameter additionalCheckProps should be string');
+        }
+        if (strlen($additionalCheckProps) > 16) {
+            throw new \LengthException('Parameter additionalCheckProps should has length less than or equal 16');
+        }
+        $this->additionalCheckProps = $additionalCheckProps;
+    }
 }
