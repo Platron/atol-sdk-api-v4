@@ -10,8 +10,8 @@ Platron Atol SDK
 ```
 composer require phpunit/phpunit
 ```
-Для того, чтобы запустить интеграционные тесты нужно скопировать файл tests/integration/MerchantSettingsSample.php удалив 
-из названия Sample и вставив настройки магазина. После выполнить команду из корня проекта
+Для того, чтобы запустить интеграционные тесты нужно скопировать файл tests/integration/MerchantSettings.php.sample удалив 
+из названия расширение .sample и вставив настройки магазина. После выполнить команду из корня проекта
 ```
 vendor/bin/phpunit vendor/payprocessing/atol-online/tests/integration
 ```
