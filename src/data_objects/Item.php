@@ -30,6 +30,8 @@ class Item extends BaseDataObject
 	protected $supplier_info;
 	/** @var string */
 	protected $user_data;
+	/** @var string */
+	protected $nomenclature_code;
 
 	/**
 	 * @param string $name Описание товара
@@ -99,5 +101,13 @@ class Item extends BaseDataObject
 	public function addUserData($userData)
 	{
 		$this->user_data = (string)$userData;
+	}
+
+	/**
+	 * @param string $nomenclatureCode
+	 */
+	public function addNomenclatureCode($nomenclatureCode)
+	{
+		$this->nomenclature_code = (string)$nomenclatureCode;
 	}
 }
