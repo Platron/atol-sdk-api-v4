@@ -116,4 +116,32 @@ class Item extends BaseDataObject
 	{
 		$this->nomenclature_code = (string)$nomenclatureCode;
 	}
+    
+    /**
+	 * @param float $excise
+	 */
+    
+    public function addExcise($excise)
+    {
+        $this->excise = $excise;
+    }
+    
+    /**
+	 * @param string $countryCode
+	 */
+    
+    public function addCountryCode($countryCode)
+    {
+        $this->country_code = (string)$countryCode;
+    }
+    
+    /**
+	 * @param string $declarationNumber
+	 */
+    
+    public function addDeclarationNumber($declarationNumber) 
+    {
+        $this->declaration_number = (string)$declarationNumber;
+    }
+
 }
