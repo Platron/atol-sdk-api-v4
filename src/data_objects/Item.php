@@ -32,6 +32,12 @@ class Item extends BaseDataObject
 	protected $user_data;
 	/** @var string */
 	protected $nomenclature_code;
+    /** @var float */
+    protected $excise;
+    /** @var string */
+    protected $country_code;
+    /** @var string */
+    protected $declaration_number;
 
 	/**
 	 * @param string $name Описание товара
