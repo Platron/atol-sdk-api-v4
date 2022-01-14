@@ -1,0 +1,232 @@
+2022-01-14 10:13:51; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 10:13:51; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 10:13:51; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1","error":null,"timestamp":"14.01.2022 13:13:54"}
+2022-01-14 10:13:51; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/buy_correction params {"external_id":"1642155231","correction":{"company":{"email":"test@test.ru","sno":"esn","inn":"5544332219","payment_address":"https:\/\/v4.online.atol.ru"},"correction_info":{"type":"self","base_date":"14.01.2022","base_number":"Test base number","base_name":"Test base name"},"payments":[{"type":1,"sum":100}],"vats":[{"type":"vat10","sum":0.91}]},"timestamp":"14.01.2022 10:13:51"}
+2022-01-14 10:13:51; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 10:13:51; Response {"uuid":"35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc","status":"wait","error":null,"timestamp":"14.01.2022 13:13:54"}
+2022-01-14 10:13:52; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc params []
+2022-01-14 10:13:52; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 10:13:52; Response {"uuid":"35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc","status":"wait","error":{"code":34,"error_id":"45d862d2-ee62-4b26-885c-58f0016557b2","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 13:13:54"}
+2022-01-14 10:13:53; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc params []
+2022-01-14 10:13:53; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 10:13:53; Response {"uuid":"35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc","status":"wait","error":{"code":34,"error_id":"5c02bd23-b041-4047-9806-532cc6d11815","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 13:13:55"}
+2022-01-14 10:13:54; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc params []
+2022-01-14 10:13:54; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 10:13:54; Response {"callback_url":"","daemon_code":"nextserver","device_code":"KKT000124","warnings":null,"error":null,"external_id":"1642155231","group_code":"v4-online-atol-ru_4179","payload":{"ecr_registration_number":"0000000005017793","fiscal_document_attribute":223858065,"fiscal_document_number":17850,"fiscal_receipt_number":745,"fn_number":"9999078900006242","fns_site":"www.nalog.ru","receipt_datetime":"14.01.2022 13:13:00","shift_number":5,"total":100.0,"ofd_inn":"7709364346","ofd_receipt_url":"https://consumer.1-ofd-test.ru/v1?fn=9999078900006242&fp=223858065&i=17850&t=20220114T131300&s=100&n=6"},"status":"done","uuid":"35d4220b-c9a7-4d4e-b01f-d0bd6b8cc2dc","timestamp":"14.01.2022 13:13:55"}
+2022-01-14 10:13:54; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 10:13:54; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 10:13:54; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr","error":null,"timestamp":"14.01.2022 13:13:57"}
+2022-01-14 10:13:54; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/buy params {"external_id":"1642155234","receipt":{"client":{"phone":"+79050000000","email":"test@test.ru"},"company":{"email":"company@test.ru","sno":"esn","inn":"5544332219","payment_address":"https:\/\/v4.online.atol.ru"},"items":[{"sum":20,"vat":{"type":"vat10","sum":1.82},"name":"Test Product","price":10,"quantity":2,"measurement_unit":"pounds","payment_method":"full_payment","payment_object":"commodity","agent_info":{"type":"paying_agent","paying_agent":{"operation":"Operation name","phones":["79050000003","79050000004"]},"receive_payments_operator":{"phones":["79050000006","79050000007"]},"money_transfer_operator":{"name":"Test moneyTransfer operator","address":"site.ru","inn":"5544332219"}},"supplier_info":{"name":"Supplier name","inn":"5544332219"},"user_data":"Test user data"}],"payments":[{"type":1,"sum":20}],"total":20},"timestamp":"14.01.2022 10:13:54"}
+2022-01-14 10:13:54; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 10:13:54; Response {"uuid":"76e7bd25-e3ab-48b3-b47e-99922f1c78a7","status":"wait","error":null,"timestamp":"14.01.2022 13:13:57"}
+2022-01-14 10:13:55; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/76e7bd25-e3ab-48b3-b47e-99922f1c78a7 params []
+2022-01-14 10:13:55; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 10:13:55; Response {"uuid":"76e7bd25-e3ab-48b3-b47e-99922f1c78a7","status":"wait","error":{"code":34,"error_id":"7b3364e9-a4e5-485b-bc60-adb087307114","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 13:13:57"}
+2022-01-14 10:13:56; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/76e7bd25-e3ab-48b3-b47e-99922f1c78a7 params []
+2022-01-14 10:13:56; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 10:13:56; Response {"uuid":"76e7bd25-e3ab-48b3-b47e-99922f1c78a7","status":"wait","error":{"code":34,"error_id":"6ed51c21-8709-4e84-bf9d-44501326a709","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 13:13:59"}
+2022-01-14 10:13:57; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/76e7bd25-e3ab-48b3-b47e-99922f1c78a7 params []
+2022-01-14 10:13:57; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 10:13:57; Response {"callback_url":"","daemon_code":"nextserver","device_code":"KKT000132","warnings":null,"error":null,"external_id":"1642155234","group_code":"v4-online-atol-ru_4179","payload":{"ecr_registration_number":"0000000005038476","fiscal_document_attribute":2159028357,"fiscal_document_number":17594,"fiscal_receipt_number":804,"fn_number":"9999078900006369","fns_site":"www.nalog.ru","receipt_datetime":"14.01.2022 13:13:00","shift_number":6,"total":20.0,"ofd_inn":"7709364346","ofd_receipt_url":"https://consumer.1-ofd-test.ru/v1?fn=9999078900006369&fp=2159028357&i=17594&t=20220114T131300&s=20&n=3"},"status":"done","uuid":"76e7bd25-e3ab-48b3-b47e-99922f1c78a7","timestamp":"14.01.2022 13:13:59"}
+2022-01-14 12:31:53; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 12:31:53; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 12:31:53; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1","error":null,"timestamp":"14.01.2022 15:31:56"}
+2022-01-14 12:31:54; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/buy_correction params {"external_id":"1642163513","correction":{"company":{"email":"test@test.ru","sno":"esn","inn":"5544332219","payment_address":"https:\/\/v4.online.atol.ru"},"correction_info":{"type":"self","base_date":"14.01.2022","base_number":"Test base number","base_name":"Test base name"},"payments":[{"type":1,"sum":100}],"vats":[{"type":"vat10","sum":0.91}]},"timestamp":"14.01.2022 12:31:53"}
+2022-01-14 12:31:54; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:31:54; Response {"uuid":"a3aa71d2-d1f3-487e-af2b-085435d47dd6","status":"wait","error":null,"timestamp":"14.01.2022 15:31:56"}
+2022-01-14 12:31:54; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/a3aa71d2-d1f3-487e-af2b-085435d47dd6 params []
+2022-01-14 12:31:54; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:31:54; Response {"uuid":"a3aa71d2-d1f3-487e-af2b-085435d47dd6","status":"wait","error":{"code":34,"error_id":"41ff38cc-c082-43ba-9f6f-ec592806a8e9","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 15:31:57"}
+2022-01-14 12:31:55; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/a3aa71d2-d1f3-487e-af2b-085435d47dd6 params []
+2022-01-14 12:31:55; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:31:55; Response {"uuid":"a3aa71d2-d1f3-487e-af2b-085435d47dd6","status":"wait","error":{"code":34,"error_id":"c12b9ee4-c430-4fa2-be23-96d71baedd6c","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 15:31:58"}
+2022-01-14 12:31:56; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/a3aa71d2-d1f3-487e-af2b-085435d47dd6 params []
+2022-01-14 12:31:56; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:31:56; Response {"uuid":"a3aa71d2-d1f3-487e-af2b-085435d47dd6","status":"wait","error":{"code":34,"error_id":"87c8b995-436d-47d6-98b6-b97cb794ab13","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 15:31:59"}
+2022-01-14 12:31:57; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/a3aa71d2-d1f3-487e-af2b-085435d47dd6 params []
+2022-01-14 12:31:57; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:31:57; Response {"callback_url":"","daemon_code":"nextserver","device_code":"KKT014031","warnings":null,"error":null,"external_id":"1642163513","group_code":"v4-online-atol-ru_4179","payload":{"ecr_registration_number":"0000000005039739","fiscal_document_attribute":1527672880,"fiscal_document_number":13329,"fiscal_receipt_number":483,"fn_number":"9999078900001823","fns_site":"www.nalog.ru","receipt_datetime":"14.01.2022 15:31:00","shift_number":11,"total":100.0,"ofd_inn":"9715260691","ofd_receipt_url":"https://lk.platformaofd.ru/web/noauth/cheque?fn=9999078900001823&fp=1527672880&i=13329"},"status":"done","uuid":"a3aa71d2-d1f3-487e-af2b-085435d47dd6","timestamp":"14.01.2022 15:31:59"}
+2022-01-14 12:31:57; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 12:31:57; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 12:31:57; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1","error":null,"timestamp":"14.01.2022 15:32:00"}
+2022-01-14 12:33:12; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 12:33:12; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 12:33:12; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1","error":null,"timestamp":"14.01.2022 15:33:15"}
+2022-01-14 12:33:13; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/buy_correction params {"external_id":"1642163592","correction":{"company":{"email":"test@test.ru","sno":"esn","inn":"5544332219","payment_address":"https:\/\/v4.online.atol.ru"},"correction_info":{"type":"self","base_date":"14.01.2022","base_number":"Test base number","base_name":"Test base name"},"payments":[{"type":1,"sum":100}],"vats":[{"type":"vat10","sum":0.91}]},"timestamp":"14.01.2022 12:33:12"}
+2022-01-14 12:33:13; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:33:13; Response {"uuid":"94cb5bdb-722e-4bc9-b134-e72d596d717d","status":"wait","error":null,"timestamp":"14.01.2022 15:33:15"}
+2022-01-14 12:33:13; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/94cb5bdb-722e-4bc9-b134-e72d596d717d params []
+2022-01-14 12:33:13; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:33:13; Response {"uuid":"94cb5bdb-722e-4bc9-b134-e72d596d717d","status":"wait","error":{"code":34,"error_id":"b07fa7b4-a324-4e0c-b811-bc7ae2d59880","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 15:33:16"}
+2022-01-14 12:33:14; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/94cb5bdb-722e-4bc9-b134-e72d596d717d params []
+2022-01-14 12:33:14; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:33:14; Response {"callback_url":"","daemon_code":"nextserver","device_code":"KKT000132","warnings":null,"error":null,"external_id":"1642163592","group_code":"v4-online-atol-ru_4179","payload":{"ecr_registration_number":"0000000005038476","fiscal_document_attribute":1646204798,"fiscal_document_number":17952,"fiscal_receipt_number":1162,"fn_number":"9999078900006369","fns_site":"www.nalog.ru","receipt_datetime":"14.01.2022 15:33:00","shift_number":6,"total":100.0,"ofd_inn":"7709364346","ofd_receipt_url":"https://consumer.1-ofd-test.ru/v1?fn=9999078900006369&fp=1646204798&i=17952&t=20220114T153300&s=100&n=6"},"status":"done","uuid":"94cb5bdb-722e-4bc9-b134-e72d596d717d","timestamp":"14.01.2022 15:33:16"}
+2022-01-14 12:33:14; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 12:33:14; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 12:33:14; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr","error":null,"timestamp":"14.01.2022 15:33:17"}
+2022-01-14 12:33:46; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 12:33:46; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 12:33:46; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr","error":null,"timestamp":"14.01.2022 15:33:49"}
+2022-01-14 12:33:47; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/buy_correction params {"external_id":"1642163626","correction":{"company":{"email":"test@test.ru","sno":"esn","inn":"5544332219","payment_address":"https:\/\/v4.online.atol.ru"},"correction_info":{"type":"self","base_date":"14.01.2022","base_number":"Test base number","base_name":"Test base name"},"payments":[{"type":1,"sum":100}],"vats":[{"type":"vat10","sum":0.91}]},"timestamp":"14.01.2022 12:33:46"}
+2022-01-14 12:33:47; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 12:33:47; Response {"uuid":"03a2347c-36fe-44ce-97ec-16e59468f77f","status":"wait","error":null,"timestamp":"14.01.2022 15:33:50"}
+2022-01-14 12:33:47; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/03a2347c-36fe-44ce-97ec-16e59468f77f params []
+2022-01-14 12:33:47; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 12:33:47; Response {"uuid":"03a2347c-36fe-44ce-97ec-16e59468f77f","status":"wait","error":{"code":34,"error_id":"8a626aab-ec78-41df-ab92-781f64512695","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 15:33:50"}
+2022-01-14 12:33:48; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/03a2347c-36fe-44ce-97ec-16e59468f77f params []
+2022-01-14 12:33:48; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmE28Cc06g0Kk78Ttx0DP0QP2ufXSUztIpHxby1gKs3DTqakcT3kFmvrc260TVxfEr
+)
+
+2022-01-14 12:33:48; Response {"callback_url":"","daemon_code":"nextserver","device_code":"KKT000129","warnings":null,"error":null,"external_id":"1642163626","group_code":"v4-online-atol-ru_4179","payload":{"ecr_registration_number":"0000000005064564","fiscal_document_attribute":3530005743,"fiscal_document_number":17997,"fiscal_receipt_number":1166,"fn_number":"9999078900006190","fns_site":"www.nalog.ru","receipt_datetime":"14.01.2022 15:33:00","shift_number":5,"total":100.0,"ofd_inn":"7709364346","ofd_receipt_url":"https://consumer.1-ofd-test.ru/v1?fn=9999078900006190&fp=3530005743&i=17997&t=20220114T153300&s=100&n=6"},"status":"done","uuid":"03a2347c-36fe-44ce-97ec-16e59468f77f","timestamp":"14.01.2022 15:33:50"}
+2022-01-14 12:33:48; Requested url https://testonline.atol.ru/possystem/v4/getToken params {"login":"v4-online-atol-ru","pass":"iGFFuihss"}
+2022-01-14 12:33:48; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+)
+
+2022-01-14 12:33:48; Response {"token":"9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1","error":null,"timestamp":"14.01.2022 15:33:51"}
+2022-01-14 12:33:48; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/buy params {"external_id":"1642163628","receipt":{"client":{"phone":"+79050000000","email":"test@test.ru"},"company":{"email":"company@test.ru","sno":"esn","inn":"5544332219","payment_address":"https:\/\/v4.online.atol.ru"},"items":[{"sum":20,"vat":{"type":"vat10","sum":1.82},"name":"Test Product","price":10,"quantity":2,"measurement_unit":"pounds","payment_method":"full_payment","payment_object":"commodity","agent_info":{"type":"paying_agent","paying_agent":{"operation":"Operation name","phones":["79050000003","79050000004"]},"receive_payments_operator":{"phones":["79050000006","79050000007"]},"money_transfer_operator":{"name":"Test moneyTransfer operator","address":"site.ru","inn":"5544332219"}},"supplier_info":{"name":"Supplier name","inn":"5544332219"},"user_data":"Test user data","excise":5.64,"country_code":"643","declaration_number":"10702020\/060520\/0013422"}],"payments":[{"type":1,"sum":20}],"total":20},"timestamp":"14.01.2022 12:33:48"}
+2022-01-14 12:33:48; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:33:48; Response {"uuid":"31247ddb-6eda-4b64-90f7-074cc9a91947","status":"wait","error":null,"timestamp":"14.01.2022 15:33:51"}
+2022-01-14 12:33:49; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/31247ddb-6eda-4b64-90f7-074cc9a91947 params []
+2022-01-14 12:33:49; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:33:49; Response {"uuid":"31247ddb-6eda-4b64-90f7-074cc9a91947","status":"wait","error":{"code":34,"error_id":"d2f369d0-a8ea-43d2-b256-6ee2b52dcf76","text":"Состояние чека не найдено. Попробуйте позднее.","type":"system"},"timestamp":"14.01.2022 15:33:52"}
+2022-01-14 12:33:50; Requested url https://testonline.atol.ru/possystem/v4/v4-online-atol-ru_4179/report/31247ddb-6eda-4b64-90f7-074cc9a91947 params []
+2022-01-14 12:33:50; Http headers  Array
+(
+    [0] => Content-type: application/json; charset=utf-8
+    [1] => Token: 9hXZNo8FFAgm0wAu8J_SbI_S0Be6wp8Bfh0M76DpY2Bxzj3HLmRjqHtcbz6W2ZkmHVPBhACSzQEsACqJ6Kuq1il3hqdQdadzYm15pqi4xSnGsnPmWKKZSGi7vxwWZ8P1
+)
+
+2022-01-14 12:33:50; Response {"callback_url":"","daemon_code":"nextserver","device_code":"KKT000124","warnings":null,"error":null,"external_id":"1642163628","group_code":"v4-online-atol-ru_4179","payload":{"ecr_registration_number":"0000000005017793","fiscal_document_attribute":876504223,"fiscal_document_number":18186,"fiscal_receipt_number":1081,"fn_number":"9999078900006242","fns_site":"www.nalog.ru","receipt_datetime":"14.01.2022 15:33:00","shift_number":5,"total":20.0,"ofd_inn":"7709364346","ofd_receipt_url":"https://consumer.1-ofd-test.ru/v1?fn=9999078900006242&fp=876504223&i=18186&t=20220114T153300&s=20&n=3"},"status":"done","uuid":"31247ddb-6eda-4b64-90f7-074cc9a91947","timestamp":"14.01.2022 15:33:52"}

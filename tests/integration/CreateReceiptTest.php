@@ -83,7 +83,7 @@ class CreateReceiptTest extends IntegrationTestBase
 	private function createVat()
 	{
 		$vat = new Vat(new Vates(Vates::VAT10));
-		$vat->addSum(2);
+		$vat->addSum(20);
 		return $vat;
 	}
 
@@ -173,6 +173,9 @@ class CreateReceiptTest extends IntegrationTestBase
 		$item->addPaymentMethod(new PaymentMethods(PaymentMethods::FULL_PAYMENT));
 		$item->addPaymentObject(new PaymentObjects(PaymentObjects::COMMODITY));
 		$item->addUserData('Test user data');
+        $item->addExcise(5.64);
+        $item->addCountryCode("643");
+        $item->addDeclarationNumber("10702020/060520/0013422");
 		return $item;
 	}
 
