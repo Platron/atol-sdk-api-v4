@@ -173,9 +173,9 @@ class CreateReceiptTest extends IntegrationTestBase
 		$item->addPaymentMethod(new PaymentMethods(PaymentMethods::FULL_PAYMENT));
 		$item->addPaymentObject(new PaymentObjects(PaymentObjects::COMMODITY));
 		$item->addUserData('Test user data');
-        $item->addExcise(5.64);
-        $item->addCountryCode("643");
-        $item->addDeclarationNumber("10702020/060520/0013422");
+		$item->addExcise(5.64);
+		$item->addCountryCode("643");
+		$item->addDeclarationNumber("10702020/060520/0013422");
 		return $item;
 	}
 

@@ -32,12 +32,12 @@ class Item extends BaseDataObject
 	protected $user_data;
 	/** @var string */
 	protected $nomenclature_code;
-    /** @var float */
-    protected $excise;
-    /** @var string */
-    protected $country_code;
-    /** @var string */
-    protected $declaration_number;
+	/** @var float */
+	protected $excise;
+	/** @var string */
+	protected $country_code;
+	/** @var string */
+	protected $declaration_number;
 
 	/**
 	 * @param string $name Описание товара
@@ -116,32 +116,32 @@ class Item extends BaseDataObject
 	{
 		$this->nomenclature_code = (string)$nomenclatureCode;
 	}
-    
-    /**
+
+	/**
 	 * @param float $excise
 	 */
-    
-    public function addExcise($excise)
-    {
-        $this->excise = $excise;
-    }
-    
-    /**
+
+	public function addExcise($excise)
+	{
+	$this->excise = $excise;
+	}
+
+	/**
 	 * @param string $countryCode
 	 */
-    
-    public function addCountryCode($countryCode)
-    {
-        $this->country_code = (string)$countryCode;
-    }
-    
-    /**
+
+	public function addCountryCode($countryCode)
+	{
+	$this->country_code = (string)$countryCode;
+	}
+
+	/**
 	 * @param string $declarationNumber
 	 */
-    
-    public function addDeclarationNumber($declarationNumber) 
-    {
-        $this->declaration_number = (string)$declarationNumber;
-    }
+
+	public function addDeclarationNumber($declarationNumber) 
+	{
+	$this->declaration_number = (string)$declarationNumber;
+	}
 
 }
