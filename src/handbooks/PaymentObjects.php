@@ -19,5 +19,14 @@ class PaymentObjects extends Enum
 		PAYMENT = 'payment',
 		AGENT_COMMISSION = 'agent_commission',
 		COMPOSITE = 'composite',
-		ANOTHER = 'another';
+		ANOTHER = 'another',
+		AWARD = 'award',
+		DEPOSIT = 'deposit',
+		EXPENSE = 'expense',
+		PENSION_INSURANCE_IP = 'pension_insurance_ip',
+		PENSION_INSURANCE = 'pension_insurance',
+		MEDICAL_INSURANCE_IP = 'medical_insurance_ip',
+		MEDICAL_INSURANCE = 'medical_insurance',
+		SOCIAL_INSURANCE = 'social_insurance',
+		CASINO_PAYMENT = 'casino_payment';
 }
