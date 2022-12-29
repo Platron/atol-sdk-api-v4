@@ -5,7 +5,7 @@ namespace Platron\AtolV4\data_objects;
 class Supplier extends BaseDataObject
 {
 	/** @var int[] */
-	private $phones;
+	protected $phones;
 	/** @var string */
 	protected $name;
 	/** @var int */
