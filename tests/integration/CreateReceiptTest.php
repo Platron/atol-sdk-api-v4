@@ -168,7 +168,6 @@ class CreateReceiptTest extends IntegrationTestBase
 		);
 		$agentInfo = $this->createAgentInfo();
 		$item->addAgentInfo($agentInfo);
-		$item->getPositionSum(20);
 		$item->addMeasurementUnit('pounds');
 		$item->addPaymentMethod(new PaymentMethods(PaymentMethods::FULL_PAYMENT));
 		$item->addPaymentObject(new PaymentObjects(PaymentObjects::COMMODITY));

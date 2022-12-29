@@ -6,6 +6,7 @@ use Platron\AtolV4\SdkException;
 use Platron\AtolV4\services\BaseServiceRequest;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
+use stdClass;
 
 class PostClient implements iClient
 {
@@ -41,7 +42,7 @@ class PostClient implements iClient
 
 	/**
 	 * @param BaseServiceRequest $service
-	 * @return stdClass
+	 * @return mixed|stdClass
 	 * @throws SdkException
 	 */
 	public function sendRequest(BaseServiceRequest $service)
