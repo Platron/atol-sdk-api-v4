@@ -25,7 +25,7 @@ class Supplier extends BaseDataObject
 	 */
 	public function addPhone($phone)
 	{
-		$this->phones[] = (string)$phone;
+		$this->phones[] = '+' . (string)$phone;
 	}
 
 	/**

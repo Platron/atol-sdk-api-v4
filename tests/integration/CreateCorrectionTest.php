@@ -23,6 +23,9 @@ use Platron\AtolV4\services\GetTokenRequest;
 
 class CreateCorrectionTest extends IntegrationTestBase
 {
+	/**
+	 * @throws SdkException
+	 */
 	public function testCreateCorrection()
 	{
 		$client = new PostClient();
@@ -85,13 +88,12 @@ class CreateCorrectionTest extends IntegrationTestBase
 	 */
 	private function createCompany()
 	{
-		$company = new Company(
+		return new Company(
 			'test@test.ru',
 			new SnoTypes(SnoTypes::ESN),
 			$this->inn,
 			$this->paymentAddress
 		);
-		return $company;
 	}
 
 	/**
@@ -99,13 +101,12 @@ class CreateCorrectionTest extends IntegrationTestBase
 	 */
 	private function createCorrectionInfo()
 	{
-		$correctionInfo = new CorrectionInfo(
+		return new CorrectionInfo(
 			new CorrectionTypes(CorrectionTypes::SELF),
 			new \DateTime(),
 			'Test base number',
 			'Test base name'
 		);
-		return $correctionInfo;
 	}
 
 	/**
@@ -113,11 +114,10 @@ class CreateCorrectionTest extends IntegrationTestBase
 	 */
 	private function createPayment()
 	{
-		$payment = new Payment(
+		return new Payment(
 			new PaymentTypes(PaymentTypes::ELECTRON),
 			100
 		);
-		return $payment;
 	}
 
 	/**
@@ -140,14 +140,13 @@ class CreateCorrectionTest extends IntegrationTestBase
 		$payment = $this->createPayment();
 		$vat = $this->createVat();
 
-		$correction = new Correction(
+		return new Correction(
 			new CorrectionOperationTypes(CorrectionOperationTypes::BUY_CORRECTION),
 			$company,
 			$correctionInfo,
 			$payment,
 			$vat
 		);
-		return $correction;
 	}
 
 	/**
