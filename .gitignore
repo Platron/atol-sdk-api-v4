@@ -14,3 +14,4 @@ composer.phar
 
 # Merchant settings for integration tests
 /tests/integration/MerchantSettings.php
+.phpunit.result.cache

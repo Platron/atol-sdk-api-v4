@@ -2,7 +2,9 @@
 
 namespace Platron\AtolV4\tests\integration;
 
-class IntegrationTestBase extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class IntegrationTestBase extends TestCase
 {
 	/** @var string */
 	protected $login;
@@ -15,7 +17,7 @@ class IntegrationTestBase extends \PHPUnit_Framework_TestCase
 	/** @var string */
 	protected $paymentAddress;
 
-	public function __construct()
+	protected function setUp(): void
 	{
 		$this->login = MerchantSettings::LOGIN;
 		$this->password = MerchantSettings::PASSWORD;
