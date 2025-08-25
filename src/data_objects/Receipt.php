@@ -18,6 +18,10 @@ class Receipt extends BaseDataObject
 	private $operationType;
 	/** @var string */
 	private $additionalCheckProps;
+	/** @var boolean */
+	protected $internet;
+	/** @var CashlessPayment[] */
+	private $cashlessPayments;
 
 	/**
 	 * Document constructor.
@@ -93,6 +97,13 @@ class Receipt extends BaseDataObject
 		    $params['additional_check_props'] = $this->additionalCheckProps;
         }
 
+		if (!empty($this->cashlessPayments)) {
+			$params['cashless_payments'] = [];
+			foreach ($this->cashlessPayments as $cashlessPayment) {
+				$params['cashless_payments'][] = $cashlessPayment->getParameters();
+			}
+		}
+
 		return $params;
 	}
 
@@ -109,4 +120,17 @@ class Receipt extends BaseDataObject
         }
         $this->additionalCheckProps = $additionalCheckProps;
     }
+
+	public function setInternet(bool $internet): void
+	{
+		$this->internet = $internet;
+	}
+
+	/**
+	 * @param CashlessPayment[] $cashlessPayments
+	 */
+	public function setCashlessPayments(array $cashlessPayments): void
+	{
+		$this->cashlessPayments = $cashlessPayments;
+	}
 }

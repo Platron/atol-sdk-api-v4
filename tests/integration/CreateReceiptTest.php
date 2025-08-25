@@ -4,6 +4,7 @@ namespace Platron\AtolV4\tests\integration;
 
 use Platron\AtolV4\clients\PostClient;
 use Platron\AtolV4\data_objects\AgentInfo;
+use Platron\AtolV4\data_objects\CashlessPayment;
 use Platron\AtolV4\data_objects\Client;
 use Platron\AtolV4\data_objects\Company;
 use Platron\AtolV4\data_objects\Item;
@@ -200,6 +201,11 @@ class CreateReceiptTest extends IntegrationTestBase
 		$customer = $this->createCustomer();
 		$company = $this->createCompany();
 		$receipt = new Receipt($customer, $company, [$item], $payment, new ReceiptOperationTypes(ReceiptOperationTypes::BUY));
+		$receipt->setInternet(true);
+
+		$cashlessPayment = new CashlessPayment(20, 1, 'random_id');
+		$receipt->setCashlessPayments([$cashlessPayment]);
+
 		return $receipt;
 	}
 
